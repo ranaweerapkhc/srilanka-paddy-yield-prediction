@@ -1,0 +1,16 @@
+model,subset,RMSE,MAE,R2,MAPE_%
+Naive baseline,All test (2021-25),773.1151,604.3444,0.3067,18.9881
+Naive baseline,Normal seasons,585.0338,465.1951,0.5814,13.5199
+Naive baseline,Fertilizer shock (2022),1272.5866,1160.9417,-3.0878,40.8611
+Ridge,All test (2021-25),870.309,713.3361,0.1215,22.9442
+Ridge,Normal seasons,703.8621,578.687,0.394,17.5151
+Ridge,Fertilizer shock (2022),1343.6895,1251.9328,-3.5574,44.6603
+Random Forest,All test (2021-25),832.9539,651.7714,0.1953,20.7485
+Random Forest,Normal seasons,629.7097,496.3568,0.515,14.773
+Random Forest,Fertilizer shock (2022),1372.1967,1273.43,-3.7528,44.6506
+XGBoost,All test (2021-25),902.7341,718.374,0.0548,22.8955
+XGBoost,Normal seasons,692.3321,553.4988,0.4137,16.5407
+XGBoost,Fertilizer shock (2022),1468.7919,1377.8745,-4.4455,48.3149
+EBM,All test (2021-25),922.4204,756.9815,0.0131,24.2433
+EBM,Normal seasons,754.3314,614.3713,0.304,18.6138
+EBM,Fertilizer shock (2022),1406.4969,1327.4223,-3.9934,46.7615
