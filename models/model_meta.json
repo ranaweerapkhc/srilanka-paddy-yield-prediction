@@ -1,0 +1,115 @@
+{
+  "features": [
+    "district",
+    "season",
+    "year",
+    "log_sown_total",
+    "sown_share_major",
+    "sown_share_minor",
+    "sown_share_rainfed",
+    "rain_total_mm",
+    "rain_min_month_mm",
+    "rain_max_month_mm",
+    "rain_cv",
+    "rain_pre_season_mm",
+    "temp_mean_c",
+    "temp_max_c",
+    "temp_min_c",
+    "humidity_pct",
+    "solar_mj_m2_day",
+    "wind_m_s",
+    "lag_prev_season",
+    "lag_same_season",
+    "roll3_same_season"
+  ],
+  "categorical": [
+    "district",
+    "season"
+  ],
+  "numeric": [
+    "year",
+    "log_sown_total",
+    "sown_share_major",
+    "sown_share_minor",
+    "sown_share_rainfed",
+    "rain_total_mm",
+    "rain_min_month_mm",
+    "rain_max_month_mm",
+    "rain_cv",
+    "rain_pre_season_mm",
+    "temp_mean_c",
+    "temp_max_c",
+    "temp_min_c",
+    "humidity_pct",
+    "solar_mj_m2_day",
+    "wind_m_s",
+    "lag_prev_season",
+    "lag_same_season",
+    "roll3_same_season"
+  ],
+  "target": "yield_total",
+  "train_years": [
+    1981,
+    2020
+  ],
+  "test_years": [
+    2021,
+    2025
+  ],
+  "best_params": {
+    "Ridge": {
+      "alpha": 30.0
+    },
+    "Random Forest": {
+      "n_estimators": 500,
+      "min_samples_leaf": 4,
+      "max_features": 0.5,
+      "max_depth": null
+    },
+    "XGBoost": {
+      "subsample": 0.8,
+      "reg_lambda": 5.0,
+      "n_estimators": 300,
+      "min_child_weight": 1,
+      "max_depth": 5,
+      "learning_rate": 0.03,
+      "colsample_bytree": 0.7
+    },
+    "EBM": {
+      "interactions": 0,
+      "learning_rate": 0.03,
+      "max_bins": 256,
+      "max_leaves": 3,
+      "min_samples_leaf": 2
+    }
+  },
+  "districts": [
+    "AMPARA",
+    "ANURADHAPURA",
+    "BADULLA",
+    "BATTICALOA",
+    "COLOMBO",
+    "GALLE",
+    "GAMPAHA",
+    "HAMBANTOTA",
+    "JAFFNA",
+    "KALUTARA",
+    "KANDY",
+    "KEGALLE",
+    "KILLINOCHCHI",
+    "KURUNEGALA",
+    "MAHAWELI H",
+    "MANNAR",
+    "MATALE",
+    "MATARA",
+    "MONARAGALA",
+    "MULLATIVU",
+    "NUWARA ELIYA",
+    "POLONNARUWA",
+    "PUTTALAM",
+    "RATNAPURA",
+    "TRINCOMALEE",
+    "UDAWALAWE",
+    "VAVUNIYA"
+  ]
+}
