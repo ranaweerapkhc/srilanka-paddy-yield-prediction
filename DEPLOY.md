@@ -1,4 +1,4 @@
-# Deployment (MLOps): GitHub Actions → GHCR → Azure Container Apps
+﻿# Deployment (MLOps): GitHub Actions → GHCR → Azure Container Apps
 
 ```
 git push ──► GitHub Actions ──► 1. test   (pytest: Streamlit AppTest smoke tests)
@@ -33,7 +33,7 @@ az extension add --name containerapp --upgrade
 
 az group create --name rg-paddy-yield --location southeastasia
 
-az containerapp env create --name paddy-env --resource-group rg-paddy-yield --location southeastasia
+az containerapp env create --name paddy-env --resource-group rg-paddy-yield --location eastasia
 
 az containerapp create \
   --name paddy-yield-app \
@@ -48,7 +48,8 @@ az containerapp show --name paddy-yield-app --resource-group rg-paddy-yield \
   --query properties.configuration.ingress.fqdn -o tsv      # → your public URL
 ```
 
-- **If `southeastasia` is refused** with a policy error (Azure for Students limits regions), use another region such as `eastus` or `centralindia` in all three commands.
+- **Allowed regions:** Azure for Students only allows certain regions. On this subscription they were `malaysiawest`, `indonesiacentral`, `eastasia`, `indiasouthcentral` and `southafricanorth`; `southeastasia` and `centralindia` were refused. The app runs in **`eastasia`**. The resource group's own location is only metadata, so `southeastasia` is fine there. To list your allowed regions:
+  `az policy assignment list --disable-scope-strict-match --query "[].parameters.listOfAllowedLocations.value" -o tsv`
 - **Cost:** `--min-replicas 0` scales the app to zero when nobody is using it, so it uses very little credit. The first visit after a pause takes about 30 seconds to start.
 
 ### 3. Let GitHub Actions deploy automatically (optional)
