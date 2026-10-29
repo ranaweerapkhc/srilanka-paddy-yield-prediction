@@ -1,0 +1,11 @@
+# Minimal runtime for the Streamlit app (Docker / cloud).
+# Pinned to the versions the saved models were trained with, so joblib can load them.
+interpret-core==0.7.8
+joblib==1.6.0
+matplotlib==3.11.2
+numpy==2.4.6
+pandas==3.1.0
+pyarrow==26.0.0
+scikit-learn==1.9.1
+scipy==1.17.1
+streamlit==1.66.1

@@ -65,6 +65,14 @@ Then run, in this order:
 
 No model predicts the 2021/22 fertilizer-ban seasons (RMSE ≈ 1,400–1,500), because the shock has no precedent in the training data.
 
+## Deployment (MLOps)
+On every push to `main`, GitHub Actions does three things:
+1. tests the app (`tests/`)
+2. builds the Docker image and pushes it to GitHub Container Registry
+3. updates the Azure Container App
+
+The one-time Azure setup is in [DEPLOY.md](DEPLOY.md).
+
 ## Run the app
 Run this from the project root, so that `.streamlit/config.toml` (the light theme) is picked up:
 ```bash
