@@ -65,6 +65,11 @@ Then run, in this order:
 
 No model predicts the 2021/22 fertilizer-ban seasons (RMSE ≈ 1,400–1,500), because the shock has no precedent in the training data.
 
+## Live app
+**https://paddy-yield-app.bluetree-592c475d.eastasia.azurecontainerapps.io**
+
+It runs on Azure Container Apps in the East Asia region. The app scales to zero when idle, so the first visit can take about 30 seconds.
+
 ## Deployment (MLOps)
 On every push to `main`, GitHub Actions does three things:
 1. tests the app (`tests/`)
