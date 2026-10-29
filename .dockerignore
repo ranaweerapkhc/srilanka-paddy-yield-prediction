@@ -1,0 +1,10 @@
+venv/
+.git/
+.github/
+**/__pycache__/
+**/.ipynb_checkpoints/
+notebooks/
+reports/
+data_raw/
+models/xgboost.joblib
+models/ridge.joblib
